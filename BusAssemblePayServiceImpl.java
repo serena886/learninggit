@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+add sth
 import com.vip.xfd.trade.adapter.LicaiPayAdapter;
 import com.vip.xfd.trade.common.manager.BaseManager;
 import com.vip.xfd.trade.common.processor.AbstractProcessorService;
