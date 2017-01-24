@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 second change
 first change
 add sth
+
+stupid booss
 import com.vip.xfd.trade.adapter.LicaiPayAdapter;
 import com.vip.xfd.trade.common.manager.BaseManager;
 import com.vip.xfd.trade.common.processor.AbstractProcessorService;
