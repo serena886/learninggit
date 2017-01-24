@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 second change
 first change
 add sth
-
+oh my lady
 stupid booss
 import com.vip.xfd.trade.adapter.LicaiPayAdapter;
 import com.vip.xfd.trade.common.manager.BaseManager;
