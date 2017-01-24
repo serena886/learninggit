@@ -1,0 +1,192 @@
+-XX:+AlwaysPreTouch -XX:AutoBoxCacheMax=20000 -XX:CMSInitiatingOccupancyFraction=75 -XX:ErrorFile=/apps/logs/osp/hs_err_%p.log -XX:+ExplicitGCInvokesConcurrent -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/apps/logs/osp/ -XX:InitialHeapSize=4294967296 -XX:+ManagementServer -XX:MaxDirectMemorySize=4294967296 -XX:MaxHeapSize=4294967296 -XX:MaxPermSize=536870912 -XX:MaxTenuringThreshold=6 -XX:NewRatio=1 -XX:OldPLABSize=16 -XX:-OmitStackTraceInFastThrow -XX:+ParallelRefProcEnabled -XX:PermSize=134217728 -XX:+PrintCommandLineFlags -XX:+PrintGC -XX:+PrintGCApplicationConcurrentTime -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:ReservedCodeCacheSize=314572800 -XX:-UseBiasedLocking -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:-UseCounterDecay -XX:+UseParNewGC 
+10:52:22,763 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Added status listener of type [ch.qos.logback.core.status.OnConsoleStatusListener]
+10:52:22,888 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+10:52:22,888 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [ROLLING]
+10:52:22,999 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - No compression will be used
+10:52:23,000 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - Will use the pattern /apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.%d{yyyy-MM-dd}.log for the active file
+10:52:23,003 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern '/apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.%d{yyyy-MM-dd}.log'.
+10:52:23,003 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+10:52:23,003 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Thu Jan 19 10:52:23 CST 2017
+10:52:23,006 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - Active log file name: /apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.log
+10:52:23,006 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - File property is set to [/apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.log]
+10:52:23,015 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+10:52:23,015 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [ROLLING-ASYNC]
+10:52:23,031 |-INFO in ch.qos.logback.classic.AsyncAppender[ROLLING-ASYNC] - Attaching appender named [ROLLING] to AsyncAppender.
+10:52:23,032 |-INFO in ch.qos.logback.classic.AsyncAppender[ROLLING-ASYNC] - Setting discardingThreshold to 0
+10:52:23,036 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [com.vipshop.mercury.log.logback.MercuryLogbackAppender]
+10:52:23,037 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MERCURY]
+10:52:23,072 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [com.vip] to WARN
+10:52:23,081 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MERCURY] to Logger[com.vip]
+10:52:23,082 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+10:52:23,082 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MercuryTraceFileAppender]
+10:52:23,088 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@272e3d60 - No compression will be used
+10:52:23,099 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryTraceFileAppender] - Active log file name: /apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/trace-log.out
+10:52:23,099 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryTraceFileAppender] - File property is set to [/apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/trace-log.out]
+10:52:23,100 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [mercury-trace-logger] to INFO
+10:52:23,100 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MercuryTraceFileAppender] to Logger[mercury-trace-logger]
+10:52:23,101 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+10:52:23,101 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MercuryLogFileAppender]
+10:52:23,104 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@26672f0d - No compression will be used
+10:52:23,107 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryLogFileAppender] - Active log file name: /apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/log-log.out
+10:52:23,107 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryLogFileAppender] - File property is set to [/apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/log-log.out]
+10:52:23,108 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [mercury-log-logger] to INFO
+10:52:23,108 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MercuryLogFileAppender] to Logger[mercury-log-logger]
+10:52:23,109 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+10:52:23,109 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MercuryMetricFileAppender]
+10:52:23,111 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@3b278afa - No compression will be used
+10:52:23,114 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryMetricFileAppender] - Active log file name: /apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/metric-log.out
+10:52:23,114 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryMetricFileAppender] - File property is set to [/apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/metric-log.out]
+10:52:23,115 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [mercury-metric-logger] to INFO
+10:52:23,115 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MercuryMetricFileAppender] to Logger[mercury-metric-logger]
+10:52:23,118 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [ROOT] to WARN
+10:52:23,118 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [ROLLING-ASYNC] to Logger[ROOT]
+10:52:23,728 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@167e90a0 - No compression will be used
+10:52:23,728 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesCoreAppender] - Active log file name: /apps/logs/hermes/logs/osp-xfd-core-account.api.vip.com/hermes-log.out
+10:52:23,728 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesCoreAppender] - File property is set to [/apps/logs/hermes/logs/osp-xfd-core-account.api.vip.com/hermes-log.out]
+10:52:23,729 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@4f4903e9 - No compression will be used
+10:52:23,729 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesEventAppender] - Active log file name: /apps/logs/event/logs/osp-xfd-core-account.api.vip.com/event-log.out
+10:52:23,729 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesEventAppender] - File property is set to [/apps/logs/event/logs/osp-xfd-core-account.api.vip.com/event-log.out]
+10:52:23,729 |-INFO in ch.qos.logback.classic.AsyncAppender[AsyncHermesEventAppender] - Attaching appender named [hermesEventAppender] to AsyncAppender.
+10:52:23,729 |-INFO in ch.qos.logback.classic.AsyncAppender[AsyncHermesEventAppender] - Setting discardingThreshold to 0
+I> No access restrictor found, access to all MBean is allowed
+Exception in thread "Thread-1" java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at com.vip.osp.engine.OspEngine$1.run(OspEngine.java:452)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at com.vip.osp.engine.OspEngine$1.run(OspEngine.java:450)
+	... 1 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.vip.osp.container.StartContainer.createSpringContext(StartContainer.java:282)
+	at com.vip.osp.container.StartContainer.startUp(StartContainer.java:88)
+	... 6 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openCreditAccountService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.vip.vcp.account.manager.LicaiSignStatusManager com.vip.vcp.account.service.open.OpenCreditAccountServiceImpl.licaiSignStatusManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'licaiSignStatusManagerImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.vip.vcp.account.manager.impl.LicaiSignStatusManagerImpl.xgLicaiPartnerId; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'xg_licai_partner_id' in string value "${xg_licai_partner_id}"
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'modifyAccountInfoOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'modifyAccountTypeOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'modifyAccountPhoneOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'modifyAccountStatusOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'modifyCreditLimitOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'preOpeningAccountCloseOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'reOpenAccountOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'deleteAccountOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'synchroWpbOpenOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'addWithholdingOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'modifyWithHoldStatusOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'modifyWithholdPriorityOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'addCollectionOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'accountInfoServiceOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Related cause: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'updateCollectionLevelServiceOsp': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	... 12 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.vip.vcp.account.manager.LicaiSignStatusManager com.vip.vcp.account.service.open.OpenCreditAccountServiceImpl.licaiSignStatusManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'licaiSignStatusManagerImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.vip.vcp.account.manager.impl.LicaiSignStatusManagerImpl.xgLicaiPartnerId; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'xg_licai_partner_id' in string value "${xg_licai_partner_id}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 24 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'licaiSignStatusManagerImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.vip.vcp.account.manager.impl.LicaiSignStatusManagerImpl.xgLicaiPartnerId; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'xg_licai_partner_id' in string value "${xg_licai_partner_id}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private java.lang.String com.vip.vcp.account.manager.impl.LicaiSignStatusManagerImpl.xgLicaiPartnerId; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'xg_licai_partner_id' in string value "${xg_licai_partner_id}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 37 more
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'xg_licai_partner_id' in string value "${xg_licai_partner_id}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:194)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:158)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$2.resolveStringValue(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:802)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:871)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 39 more
+-XX:+AlwaysPreTouch -XX:AutoBoxCacheMax=20000 -XX:CMSInitiatingOccupancyFraction=75 -XX:ErrorFile=/apps/logs/osp/hs_err_%p.log -XX:+ExplicitGCInvokesConcurrent -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/apps/logs/osp/ -XX:InitialHeapSize=4294967296 -XX:+ManagementServer -XX:MaxDirectMemorySize=4294967296 -XX:MaxHeapSize=4294967296 -XX:MaxPermSize=536870912 -XX:MaxTenuringThreshold=6 -XX:NewRatio=1 -XX:OldPLABSize=16 -XX:-OmitStackTraceInFastThrow -XX:+ParallelRefProcEnabled -XX:PermSize=134217728 -XX:+PrintCommandLineFlags -XX:+PrintGC -XX:+PrintGCApplicationConcurrentTime -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:ReservedCodeCacheSize=314572800 -XX:-UseBiasedLocking -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:-UseCounterDecay -XX:+UseParNewGC 
+11:50:04,628 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Added status listener of type [ch.qos.logback.core.status.OnConsoleStatusListener]
+11:50:04,749 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+11:50:04,750 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [ROLLING]
+11:50:04,855 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - No compression will be used
+11:50:04,856 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - Will use the pattern /apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.%d{yyyy-MM-dd}.log for the active file
+11:50:04,859 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy-MM-dd' from file name pattern '/apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.%d{yyyy-MM-dd}.log'.
+11:50:04,859 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Roll-over at midnight.
+11:50:04,860 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Thu Jan 19 10:52:24 CST 2017
+11:50:04,862 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - Active log file name: /apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.log
+11:50:04,862 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - File property is set to [/apps/logs/log_receiver/osp-xfd-core-account.api.vip.com/application.log]
+11:50:04,870 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+11:50:04,871 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [ROLLING-ASYNC]
+11:50:04,886 |-INFO in ch.qos.logback.classic.AsyncAppender[ROLLING-ASYNC] - Attaching appender named [ROLLING] to AsyncAppender.
+11:50:04,886 |-INFO in ch.qos.logback.classic.AsyncAppender[ROLLING-ASYNC] - Setting discardingThreshold to 0
+11:50:04,891 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [com.vipshop.mercury.log.logback.MercuryLogbackAppender]
+11:50:04,891 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MERCURY]
+11:50:04,924 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [com.vip] to WARN
+11:50:04,933 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MERCURY] to Logger[com.vip]
+11:50:04,934 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+11:50:04,934 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MercuryTraceFileAppender]
+11:50:04,940 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@272e3d60 - No compression will be used
+11:50:04,951 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryTraceFileAppender] - Active log file name: /apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/trace-log.out
+11:50:04,951 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryTraceFileAppender] - File property is set to [/apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/trace-log.out]
+11:50:04,951 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [mercury-trace-logger] to INFO
+11:50:04,951 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MercuryTraceFileAppender] to Logger[mercury-trace-logger]
+11:50:04,952 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+11:50:04,952 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MercuryLogFileAppender]
+11:50:04,955 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@26672f0d - No compression will be used
+11:50:04,958 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryLogFileAppender] - Active log file name: /apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/log-log.out
+11:50:04,958 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryLogFileAppender] - File property is set to [/apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/log-log.out]
+11:50:04,959 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [mercury-log-logger] to INFO
+11:50:04,959 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MercuryLogFileAppender] to Logger[mercury-log-logger]
+11:50:04,960 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+11:50:04,960 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Naming appender as [MercuryMetricFileAppender]
+11:50:04,962 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@3b278afa - No compression will be used
+11:50:04,965 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryMetricFileAppender] - Active log file name: /apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/metric-log.out
+11:50:04,965 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[MercuryMetricFileAppender] - File property is set to [/apps/logs/trace/logs/osp-xfd-core-account.api.vip.com/metric-log.out]
+11:50:04,966 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [mercury-metric-logger] to INFO
+11:50:04,966 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [MercuryMetricFileAppender] to Logger[mercury-metric-logger]
+11:50:04,969 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Setting level of logger [ROOT] to WARN
+11:50:04,969 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@318eec0c - Attaching appender named [ROLLING-ASYNC] to Logger[ROOT]
+11:50:05,582 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@167e90a0 - No compression will be used
+11:50:05,582 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesCoreAppender] - Active log file name: /apps/logs/hermes/logs/osp-xfd-core-account.api.vip.com/hermes-log.out
+11:50:05,582 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesCoreAppender] - File property is set to [/apps/logs/hermes/logs/osp-xfd-core-account.api.vip.com/hermes-log.out]
+11:50:05,582 |-INFO in ch.qos.logback.core.rolling.FixedWindowRollingPolicy@4f4903e9 - No compression will be used
+11:50:05,583 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesEventAppender] - Active log file name: /apps/logs/event/logs/osp-xfd-core-account.api.vip.com/event-log.out
+11:50:05,583 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[hermesEventAppender] - File property is set to [/apps/logs/event/logs/osp-xfd-core-account.api.vip.com/event-log.out]
+11:50:05,583 |-INFO in ch.qos.logback.classic.AsyncAppender[AsyncHermesEventAppender] - Attaching appender named [hermesEventAppender] to AsyncAppender.
+11:50:05,583 |-INFO in ch.qos.logback.classic.AsyncAppender[AsyncHermesEventAppender] - Setting discardingThreshold to 0
+I> No access restrictor found, access to all MBean is allowed
+Start loading mercury setting by venus configuration
+End loading mercury setting by venus configuration
+start check result: [SUCCESS]
+I> No access restrictor found, access to all MBean is allowed
+I> jolokia:type=Config is already registered. Adding it with jolokia:type=Config,uuid=bded7ad3-c113-4cde-bd3b-aa0ece399058, but you should revise your setup in order to either use a qualifier or ensure, that only a single agent gets registered (otherwise history functionality might not work)
+I> Cannot register (legacy) MBean handler for config store with name jmx4perl:type=Config since it already exists. This is the case if another agent has been already started within the same JVM. The registration is skipped.
+I> Jolokia Discovery MBean registration is skipped because there is already one registered.
